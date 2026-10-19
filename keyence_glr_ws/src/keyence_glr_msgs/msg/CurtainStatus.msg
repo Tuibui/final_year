@@ -1,0 +1,9 @@
+std_msgs/Header header
+uint16 beam_count
+bool ossd_a
+bool ossd_b
+bool lockout
+bool muted
+bool any_blocked
+uint16 blocked_count
+BeamStatus[] beams

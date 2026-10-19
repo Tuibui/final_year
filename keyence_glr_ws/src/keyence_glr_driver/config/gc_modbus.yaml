@@ -1,0 +1,24 @@
+# Keyence GL-R52H via GC-Link controller (GC-1000) over Modbus/TCP.
+#
+# Register map: GC Series User's Manual, ch. 19-4 — GC-Link port A
+# "GL-R ON/OFF information of each optical axis" starts at word 970 (0x03CA):
+#   970 -> beams  1..16     971 -> beams 17..32
+#   972 -> beams 33..48     973 -> beams 49..64   (GL-R52H uses bits 0..3 of 973)
+# bit = 1 means the axis is clear; bit = 0 means blocked (driver inverts to
+# the project convention where BeamStatus.blocked == True means blocked).
+#
+# ip_address = the GC-1000 IP, not the Jetson.
+# beam_count = 52 for GL-R52H; the driver reads ceil(beam_count / 16) words.
+# register_type: 'holding' (FC03) or 'input' (FC04). Both expose the same
+#   data on this controller; FC03 is the manual's primary recommendation.
+keyence_glr_driver:
+  ros__parameters:
+    ip_address: "192.168.0.10"
+    port: 502
+    unit_id: 1
+    register_type: "holding"
+    start_address: 970
+    beam_count: 52
+    poll_hz: 20.0
+    frame_id: "gl_r"
+    stale_timeout_s: 0.5
