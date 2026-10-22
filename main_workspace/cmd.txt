@@ -1,0 +1,11 @@
+  source /opt/ros/humble/setup.bash
+  cd ~/kosen/main_workspace
+  source install_humble/local_setup.bash
+ 
+  ros2 launch hand_detect hand_detect.launch.py \
+    config:="$HOME/.config/hand_detect/camera.local.yaml"
+ 
+  ดูผลจากอีก Terminal ที่ source workspace แล้ว:
+ 
+  ros2 topic echo /hand_detect/status --qos-reliability best_effort
+ 

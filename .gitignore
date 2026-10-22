@@ -24,6 +24,12 @@ venv/
 build/
 install/
 log/
+*.engine
+*.onnx
+main_workspace/src/hand_detect/models/
+*.local.yaml
+*.local.txt
+/runtime/
 
 # ==========================
 # Ubuntu / Linux

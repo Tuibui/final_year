@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GC-1000 / GL-R Monitor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>GC-1000 / GL-R Monitor</h1>
+    <p id="connection" role="status" aria-live="polite">Connecting to ROS bridge…</p>
+    <p id="summary">Waiting for light-curtain data</p>
+    <small>1 = blocked · 0 = clear · — = unavailable</small>
+  </header>
+  <ul id="beams"></ul>
+  <script src="app.js"></script>
+</body>
+</html>

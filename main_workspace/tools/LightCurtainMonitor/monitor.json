@@ -1,0 +1,16 @@
+{
+  "endpoint": "ws://172.20.10.3:9090",
+  "staleAfterMs": 1000,
+  "x": {
+    "port": "A",
+    "topic": "/gl_r/status",
+    "beamCount": 52,
+    "reverse": true
+  },
+  "y": {
+    "port": "B",
+    "topic": "/gl_r_y/status",
+    "beamCount": 52,
+    "reverse": false
+  }
+}

@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #1f2937;
+  font: 14px/1 ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+header {
+  padding: 16px 20px 8px;
+}
+header h1 {
+  font-size: 18px;
+  margin: 0 0 12px;
+}
+header p {
+  line-height: 1.4;
+  margin: 6px 0;
+}
+header small {
+  color: #4b5563;
+}
+#connection[data-state="live"] {
+  color: #166534;
+}
+#connection[data-state="unavailable"] {
+  color: #92400e;
+}
+ul#beams {
+  list-style: none;
+  margin: 0;
+  padding: 12px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 2px;
+}
+ul#beams li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 8px;
+  border-radius: 3px;
+  background: #f3f4f6;
+}
+ul#beams li .i {
+  width: 28px;
+  text-align: right;
+  color: #4b5563;
+}
+ul#beams li b {
+  font-weight: 600;
+  color: #374151;
+}
+ul#beams li.on {
+  background: #fee2e2;
+}
+ul#beams li.on b {
+  color: #b91c1c;
+}
+ul#beams li.unknown {
+  opacity: 0.65;
+}
